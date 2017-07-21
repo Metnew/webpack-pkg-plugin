@@ -1,7 +1,6 @@
 # Webpack-Plg-Plugin
 
 ## [Pkg](https://github.com/zeit/pkg) your scripts into executable
-### NOT FINISHED. DON'T USE!
 
 ### Install
 ```bash
@@ -12,18 +11,23 @@
 
 ```js
   const WebpackPkgPlugin = require('webpack-pkg-plugin').WebpackPkgPlugin
-  // or with the new syntax (if you're sure that your Node supports it):
+  // or with the new syntax (if your Node supports it):
   // const {WebpackPkgPlugin} = require('webpack-pkg-plugin')
   // And if you use modules:
   // import {WebpackPkgPlugin} from 'webpack-pkg-plugin'
-
   /*
   ...
    */
   // More about pkg configuration: https://github.com/zeit/pkg#config
-  // Default params:
   new WebpackPkgPlugin({
-    targets: ['host'], // array of targets
-    output: '/pkg', // Path for dir with executables inside your output folder
+    // Default params:
+    targets: ['host'], // array of targets (--targets option)
+    output: '/pkg', // Path for dir with executables inside your output folder (--out-path)
   })
 ```
+
+### License
+MIT
+
+### Author
+Vladimir Metnew <vladimirmetnew@gmail.com>

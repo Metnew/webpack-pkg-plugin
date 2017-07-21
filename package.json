@@ -3,10 +3,11 @@
   "version": "0.0.2",
   "main": "./index.js",
   "description": "Makes executables from your scripts with Webpack",
-  "dependencies": {},
-  "peerDependencies": {
-    "webpack": " >= 3.0",
+  "dependencies": {
     "pkg": "^4.1.2"
+  },
+  "peerDependencies": {
+    "webpack": " >= 3.0"
   },
   "scripts": {},
   "author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
