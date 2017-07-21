@@ -1,0 +1,22 @@
+{
+  "name": "webpack-pkg-plugin",
+  "version": "3.0.0",
+  "main": "./index.js",
+  "description": "Makes executables from your scripts with Webpack",
+  "dependencies": {},
+  "peerDependencies": {
+    "webpack": " >= 3.0",
+    "pkg": "^4.1.2"
+  },
+  "scripts": {},
+  "author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/Metnew/webpack-pkg-plugin.git",
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "pkg",
+    "executable",
+    "binary"
+  ]
+}
