@@ -26,6 +26,9 @@
   })
 ```
 
+### Development
+Any contribution, issue or pull request are highly appreciated.
+
 ### License
 MIT
 
