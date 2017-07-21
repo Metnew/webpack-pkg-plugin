@@ -31,7 +31,7 @@ class WebpackPkgPlugin {
       const entry = path.join(outputPath, IAssumeThatYouConcatenatedYourApp)
       const distPath = path.join(outputPath, output)
 
-      await exec([entry, '--debug', '--targets', targets.join(','), '--out-path', distPath])
+      await exec([entry, '--targets', targets.join(','), '--out-path', distPath])
       callback()
     })
   }
