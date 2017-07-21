@@ -1,7 +1,6 @@
 // const mm = require('micromatch');
 const {exec} = require('pkg')
 const path = require('path')
-const execSync = require('child_process').execSync
 
 class WebpackPkgPlugin {
   constructor ({targets, output}) {
