@@ -1,5 +1,7 @@
 # Webpack-Plg-Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Metnew/webpack-pkg-plugin.svg)](https://greenkeeper.io/)
+
 ## [Pkg](https://github.com/zeit/pkg) your scripts into executable
 
 ### Install
