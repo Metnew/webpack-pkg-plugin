@@ -1,4 +1,4 @@
-# Webpack-Plg-Plugin
+# Webpack-Pkg-Plugin
 
 ## [Pkg](https://github.com/zeit/pkg) your scripts into executable
 
