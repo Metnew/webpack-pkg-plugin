@@ -1,5 +1,7 @@
 # Webpack-Pkg-Plugin
 
+## Updated to be compatible with webpack v4
+
 ## [Pkg](https://github.com/zeit/pkg) your scripts into executable
 
 ### Install
