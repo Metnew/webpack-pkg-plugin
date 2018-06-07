@@ -1,4 +1,3 @@
-// const mm = require('micromatch');
 const {exec} = require('pkg')
 const path = require('path')
 
@@ -19,19 +18,19 @@ class WebpackPkgPlugin {
   }
 
   apply (compiler) {
-    compiler.plugin('after-emit', async (compilation, callback) => {
-      const {targets, output} = this.options
-      const {outputPath} = compilation.compiler
+    compiler.hooks.afterEmit.tapAsync('WebpackPkgPlugin', async (compilation, callback) => {
+      const {targets, output} = this.options;
+      const outputPath = compilation.compiler.options.output.path;
 
       // NOTE: get only first file from compiled assets
       const IAssumeThatYouConcatenatedYourApp = Object.keys(
         compilation.assets
-      )[0]
-      const entry = path.join(outputPath, IAssumeThatYouConcatenatedYourApp)
-      const distPath = path.join(outputPath, output)
+      )[0];
 
-      await exec([entry, '--targets', targets.join(','), '--out-path', distPath])
-      callback()
+      const entry = path.join(outputPath, IAssumeThatYouConcatenatedYourApp);
+      const distPath = path.join(outputPath, output);
+      await exec([entry, '--targets', targets.join(','), '--out-path', distPath]);
+      callback();
     })
   }
 }
