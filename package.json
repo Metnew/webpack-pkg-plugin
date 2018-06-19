@@ -4,12 +4,16 @@
   "main": "./index.js",
   "description": "Makes executables from your scripts with Webpack",
   "dependencies": {
-    "pkg": "^4.1.2"
+    "pkg": "^4.1.2",
+    "snyk": "^1.83.0"
   },
   "peerDependencies": {
     "webpack": " >= 3.0"
   },
-  "scripts": {},
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
   "author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/Metnew/webpack-pkg-plugin.git",
@@ -19,5 +23,6 @@
     "pkg",
     "executable",
     "binary"
-  ]
+  ],
+  "snyk": true
 }
