@@ -1,4 +1,4 @@
-# Webpack-Pkg-Plugin
+# Webpack-Pkg-Plugin-v4
 
 ## Updated to be compatible with webpack v4
 
@@ -6,17 +6,17 @@
 
 ### Install
 ```bash
-  npm i --save-dev webpack-pkg-plugin
+  npm i --save-dev webpack-pkg-plugin-v4
 ```
 
 ### Usage
 
 ```js
-  const WebpackPkgPlugin = require('webpack-pkg-plugin').WebpackPkgPlugin
+  const WebpackPkgPlugin = require('webpack-pkg-plugin-v4').WebpackPkgPlugin
   // or with the new syntax (if your Node supports it):
-  // const {WebpackPkgPlugin} = require('webpack-pkg-plugin')
+  // const {WebpackPkgPlugin} = require('webpack-pkg-plugin-v4')
   // And if you use modules:
-  // import {WebpackPkgPlugin} from 'webpack-pkg-plugin'
+  // import {WebpackPkgPlugin} from 'webpack-pkg-plugin-v4'
   /*
   ...
    */
