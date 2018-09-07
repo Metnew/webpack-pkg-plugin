@@ -1,6 +1,6 @@
 {
   "name": "webpack-pkg-plugin-v4",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "./index.js",
   "description": "Makes executables from your scripts with Webpack",
   "dependencies": {
