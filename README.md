@@ -36,3 +36,4 @@ MIT
 
 ### Author
 Vladimir Metnew <vladimirmetnew@gmail.com>
+Thanks to @BryanSummers14 for Webpack v4 support!
