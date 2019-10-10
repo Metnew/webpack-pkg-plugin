@@ -12,7 +12,8 @@
   "scripts": {},
   "author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
   "contributors": [
-    "Brian Summers <briansummers14@gmail.com>"
+    "Brian Summers <briansummers14@gmail.com>",
+    "Christoph Mayr <christophmayr91@gmail.com>"
   ],
   "license": "MIT",
   "repository": "https://github.com/Metnew/webpack-pkg-plugin.git",
