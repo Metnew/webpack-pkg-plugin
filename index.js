@@ -1,38 +1,38 @@
-const {exec} = require('pkg')
-const path = require('path')
+const { exec } = require('pkg');
+const { join } = require('path');
 
 class WebpackPkgPlugin {
-  constructor ({targets, output}) {
-    const isArray = targets instanceof Array
+  constructor({ targets, output }) {
+    const isArray = targets instanceof Array;
     if (!isArray) {
       console.log(
         '"targets" option for WebpackPkgPlugin isn\'t specified. Using defaults.'
       )
     }
 
-    const arrayOfTargets = isArray ? targets : ['host']
+    const arrayOfTargets = isArray ? targets : ['host'];
     this.options = {
       targets: arrayOfTargets,
       output
     }
   }
 
-  apply (compiler) {
+  apply(compiler) {
     compiler.hooks.afterEmit.tapAsync('WebpackPkgPlugin', async (compilation, callback) => {
-      const {targets, output} = this.options;
+      const { targets, output } = this.options;
       const outputPath = compilation.compiler.options.output.path;
 
-      // NOTE: get only first file from compiled assets
-      const IAssumeThatYouConcatenatedYourApp = Object.keys(
-        compilation.assets
-      )[0];
+      const files = Object.keys(compilation.assets).filter((_, i) => i < Object.keys(compilation.compiler.options.entry).length);
 
-      const entry = path.join(outputPath, IAssumeThatYouConcatenatedYourApp);
-      const distPath = path.join(outputPath, output);
-      await exec([entry, '--targets', targets.join(','), '--out-path', distPath]);
+      for (const file of files) {
+        const entry = join(outputPath, file);
+        const distPath = join(outputPath, output);
+        await exec([entry, '--targets', targets.join(','), '--out-path', distPath]);
+      }
+
       callback();
     })
   }
 }
 
-module.exports.WebpackPkgPlugin = WebpackPkgPlugin
+module.exports.WebpackPkgPlugin = WebpackPkgPlugin;
